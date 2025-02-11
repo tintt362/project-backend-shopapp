@@ -2,6 +2,7 @@ package com.trongtin.shopapp.controllers;
 
 
 import com.trongtin.shopapp.dtos.CategoryDTO;
+import com.trongtin.shopapp.models.Category;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

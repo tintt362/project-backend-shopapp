@@ -1,10 +1,8 @@
 package com.trongtin.shopapp.controllers;
 
-import com.project.shopapp.dtos.*;
-import com.project.shopapp.exceptions.DataNotFoundException;
-import com.project.shopapp.models.OrderDetail;
-import com.project.shopapp.responses.OrderDetailResponse;
-import com.project.shopapp.services.OrderDetailService;
+
+import com.trongtin.shopapp.dtos.OrderDetailDTO;
+import com.trongtin.shopapp.models.OrderDetail;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,12 +1,10 @@
 package com.trongtin.shopapp.controllers;
 
-import com.github.javafaker.Faker;
-import com.project.shopapp.dtos.*;
-import com.project.shopapp.models.Product;
-import com.project.shopapp.models.ProductImage;
-import com.project.shopapp.responses.ProductListResponse;
-import com.project.shopapp.responses.ProductResponse;
-import com.project.shopapp.services.IProductService;
+
+import com.trongtin.shopapp.dtos.ProductDTO;
+import com.trongtin.shopapp.dtos.ProductImageDTO;
+import com.trongtin.shopapp.models.Product;
+import com.trongtin.shopapp.models.ProductImage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

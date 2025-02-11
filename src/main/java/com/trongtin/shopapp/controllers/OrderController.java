@@ -1,8 +1,8 @@
 package com.trongtin.shopapp.controllers;
 
-import com.project.shopapp.dtos.*;
-import com.project.shopapp.models.Order;
-import com.project.shopapp.services.IOrderService;
+
+import com.trongtin.shopapp.dtos.OrderDTO;
+import com.trongtin.shopapp.models.Order;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

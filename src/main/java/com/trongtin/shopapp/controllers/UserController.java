@@ -1,7 +1,8 @@
 package com.trongtin.shopapp.controllers;
 
-import com.project.shopapp.models.User;
-import com.project.shopapp.services.IUserService;
+import com.trongtin.shopapp.dtos.UserDTO;
+import com.trongtin.shopapp.dtos.UserLoginDTO;
+import com.trongtin.shopapp.models.User;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.project.shopapp.dtos.*;
 
 import java.util.List;
 
