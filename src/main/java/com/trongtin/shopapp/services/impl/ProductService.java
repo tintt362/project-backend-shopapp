@@ -2,8 +2,12 @@ package com.trongtin.shopapp.services.impl;
 
 
 import com.trongtin.shopapp.dtos.ProductDTO;
+import com.trongtin.shopapp.dtos.ProductImageDTO;
+import com.trongtin.shopapp.exceptions.DataNotFoundException;
+import com.trongtin.shopapp.exceptions.InvalidParamException;
 import com.trongtin.shopapp.models.Category;
 import com.trongtin.shopapp.models.Product;
+import com.trongtin.shopapp.models.ProductImage;
 import com.trongtin.shopapp.repositories.CategoryRepository;
 import com.trongtin.shopapp.repositories.ProductImageRepository;
 import com.trongtin.shopapp.repositories.ProductRepository;
@@ -90,6 +94,9 @@ public class ProductService implements IProductService {
     public boolean existsByName(String name) {
         return productRepository.existsByName(name);
     }
+
+
+
     @Override
     public ProductImage createProductImage(
             Long productId,
