@@ -3,6 +3,7 @@ package com.trongtin.shopapp.controllers;
 import com.trongtin.shopapp.dtos.UserDTO;
 import com.trongtin.shopapp.dtos.UserLoginDTO;
 import com.trongtin.shopapp.models.User;
+import com.trongtin.shopapp.services.IUserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
