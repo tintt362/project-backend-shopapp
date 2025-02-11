@@ -1,16 +1,13 @@
 package com.trongtin.shopapp.services.impl;
 
-import com.project.shopapp.dtos.ProductDTO;
-import com.project.shopapp.dtos.ProductImageDTO;
-import com.project.shopapp.exceptions.DataNotFoundException;
-import com.project.shopapp.exceptions.InvalidParamException;
-import com.project.shopapp.models.Category;
-import com.project.shopapp.models.Product;
-import com.project.shopapp.models.ProductImage;
-import com.project.shopapp.repositories.CategoryRepository;
-import com.project.shopapp.repositories.ProductImageRepository;
-import com.project.shopapp.repositories.ProductRepository;
-import com.project.shopapp.responses.ProductResponse;
+
+import com.trongtin.shopapp.dtos.ProductDTO;
+import com.trongtin.shopapp.models.Category;
+import com.trongtin.shopapp.models.Product;
+import com.trongtin.shopapp.repositories.CategoryRepository;
+import com.trongtin.shopapp.repositories.ProductImageRepository;
+import com.trongtin.shopapp.repositories.ProductRepository;
+import com.trongtin.shopapp.services.IProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -20,7 +17,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class ProductService implements IProductService{
+public class ProductService implements IProductService {
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
     private final ProductImageRepository productImageRepository;
