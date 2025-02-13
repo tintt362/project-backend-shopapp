@@ -2,6 +2,11 @@ package com.trongtin.shopapp.models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsPasswordService;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 
 import java.util.ArrayList;
@@ -16,7 +21,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User extends BaseEntity  {
+public class User extends BaseEntity implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -48,6 +53,18 @@ public class User extends BaseEntity  {
     @ManyToOne
     @JoinColumn(name = "role_id")
     private com.trongtin.shopapp.models.Role role;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_" +getRole().getName()));
+        return authorities;
+    }
+
+    @Override
+    public String getUsername() {
+        return "";
+    }
 
 //    @Override
 //    public Collection<? extends GrantedAuthority> getAuthorities() {
