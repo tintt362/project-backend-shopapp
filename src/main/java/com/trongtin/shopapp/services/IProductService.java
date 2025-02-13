@@ -4,6 +4,7 @@ import com.trongtin.shopapp.dtos.ProductDTO;
 import com.trongtin.shopapp.dtos.ProductImageDTO;
 import com.trongtin.shopapp.models.Product;
 import com.trongtin.shopapp.models.ProductImage;
+import com.trongtin.shopapp.responses.ProductResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;

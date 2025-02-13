@@ -1,9 +1,8 @@
 package com.trongtin.shopapp.responses;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.project.shopapp.models.Order;
-import com.project.shopapp.models.OrderDetail;
-import com.project.shopapp.models.Product;
+
+import com.trongtin.shopapp.models.OrderDetail;
 import jakarta.persistence.Column;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;

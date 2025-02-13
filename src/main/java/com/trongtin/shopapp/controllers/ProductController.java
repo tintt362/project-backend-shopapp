@@ -1,10 +1,14 @@
 package com.trongtin.shopapp.controllers;
 
 
+import com.github.javafaker.Faker;
 import com.trongtin.shopapp.dtos.ProductDTO;
 import com.trongtin.shopapp.dtos.ProductImageDTO;
 import com.trongtin.shopapp.models.Product;
 import com.trongtin.shopapp.models.ProductImage;
+import com.trongtin.shopapp.responses.ProductListResponse;
+import com.trongtin.shopapp.responses.ProductResponse;
+import com.trongtin.shopapp.services.IProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -165,7 +169,7 @@ public class ProductController {
 
 
     }
-    //@PostMapping("/generateFakeProducts")
+    @PostMapping("/generateFakeProducts")
     private ResponseEntity<String> generateFakeProducts() {
         Faker faker = new Faker();
         for (int i = 0; i < 1_000_000; i++) {
@@ -178,7 +182,7 @@ public class ProductController {
                     .price((float)faker.number().numberBetween(10, 90_000_000))
                     .description(faker.lorem().sentence())
                     .thumbnail("")
-                    .categoryId((long)faker.number().numberBetween(2, 5))
+                    .categoryId((long)faker.number().numberBetween(1, 5))
                     .build();
             try {
                 productService.createProduct(productDTO);

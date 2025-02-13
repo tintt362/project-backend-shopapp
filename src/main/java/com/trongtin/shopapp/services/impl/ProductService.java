@@ -11,6 +11,7 @@ import com.trongtin.shopapp.models.ProductImage;
 import com.trongtin.shopapp.repositories.CategoryRepository;
 import com.trongtin.shopapp.repositories.ProductImageRepository;
 import com.trongtin.shopapp.repositories.ProductRepository;
+import com.trongtin.shopapp.responses.ProductResponse;
 import com.trongtin.shopapp.services.IProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
