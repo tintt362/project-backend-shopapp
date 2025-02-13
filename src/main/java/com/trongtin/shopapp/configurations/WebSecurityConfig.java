@@ -1,6 +1,7 @@
 package com.trongtin.shopapp.configurations;
 
 
+import com.trongtin.shopapp.models.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
