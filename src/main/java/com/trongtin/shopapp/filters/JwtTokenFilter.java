@@ -1,7 +1,8 @@
 package com.trongtin.shopapp.filters;
 
-import com.project.shopapp.components.JwtTokenUtil;
-import com.project.shopapp.models.User;
+
+import com.trongtin.shopapp.components.JwtTokenUtil;
+import com.trongtin.shopapp.models.User;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
