@@ -63,9 +63,28 @@ public class User extends BaseEntity implements UserDetails {
 
     @Override
     public String getUsername() {
-        return "";
+        return phoneNumber;
     }
 
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return active;
+    }
 //    @Override
 //    public Collection<? extends GrantedAuthority> getAuthorities() {
 //        List<SimpleGrantedAuthority> authorityList = new ArrayList<>();
