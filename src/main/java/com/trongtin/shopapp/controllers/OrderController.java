@@ -3,9 +3,9 @@ package com.trongtin.shopapp.controllers;
 
 import com.trongtin.shopapp.dtos.OrderDTO;
 import com.trongtin.shopapp.models.Order;
-import com.trongtin.shopapp.responses.OrderListResponse;
-import com.trongtin.shopapp.responses.OrderResponse;
-import com.trongtin.shopapp.services.IOrderService;
+import com.trongtin.shopapp.responses.order.OrderListResponse;
+import com.trongtin.shopapp.responses.order.OrderResponse;
+import com.trongtin.shopapp.services.orders.IOrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

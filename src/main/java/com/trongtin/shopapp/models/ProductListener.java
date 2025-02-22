@@ -1,12 +1,10 @@
 package com.trongtin.shopapp.models;
 
-import com.trongtin.shopapp.controllers.ProductController;
-import com.trongtin.shopapp.services.redis.IProductRedisService;
+import com.trongtin.shopapp.services.product.IProductRedisService;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @AllArgsConstructor
 public class ProductListener {

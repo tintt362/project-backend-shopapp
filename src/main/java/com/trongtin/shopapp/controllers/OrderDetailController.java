@@ -5,12 +5,10 @@ import com.trongtin.shopapp.dtos.OrderDetailDTO;
 import com.trongtin.shopapp.exceptions.DataNotFoundException;
 import com.trongtin.shopapp.models.OrderDetail;
 import com.trongtin.shopapp.responses.OrderDetailResponse;
-import com.trongtin.shopapp.services.impl.OrderDetailService;
+import com.trongtin.shopapp.services.orderdetails.OrderDetailService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
