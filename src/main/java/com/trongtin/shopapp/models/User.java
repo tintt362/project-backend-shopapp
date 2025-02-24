@@ -1,18 +1,13 @@
 package com.trongtin.shopapp.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsPasswordService;
-import org.springframework.security.core.userdetails.UserDetailsService;
 
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name = "users")
@@ -56,11 +51,12 @@ public class User extends BaseEntity implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority("ROLE_" +getRole().getName().toUpperCase()));
-        return authorities;
-    }
+        List<SimpleGrantedAuthority> authorityList = new ArrayList<>();
+        authorityList.add(new SimpleGrantedAuthority("ROLE_"+getRole().getName().toUpperCase()));
+        //authorityList.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
 
+        return authorityList;
+    }
     @Override
     public String getUsername() {
         return phoneNumber;
@@ -83,15 +79,20 @@ public class User extends BaseEntity implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return active;
+        return true;
     }
-//    @Override
-//    public Collection<? extends GrantedAuthority> getAuthorities() {
-//        List<SimpleGrantedAuthority> authorityList = new ArrayList<>();
-//        authorityList.add(new SimpleGrantedAuthority("ROLE_"+getRole().getName().toUpperCase()));
-//        //authorityList.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-//
-//        return authorityList;
-//    }
 
+//    //Login facebook
+//    @Override
+//    public Map<String, Object> getAttributes() {
+//        return null;
+//    }
+//    @Override
+//    public String getName() {
+//        return getAttribute("name");
+//    }
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+
+    @JsonManagedReference
+    private List<Comment> comments = new ArrayList<>();
 }
